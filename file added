@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+  </head>
+
+  <body>
+
+    <div id="container"></div>
+
+
+
+    <div id="dis"></div>
+
+
+
+    <button onclick="stop()">stop</button><br /><br />
+
+  </body>
+
+</html>
+
+
+
+<script>
+
+  // await /// js is non-blocking
+
+
+
+  console.log(`first person done the payment`);
+
+  console.log(`second person done the payment`);
+
+
+
+  let payment_method = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+
+      resolve("lady said");
+
+    }, 3000);
+
+  });
+
+
+
+  payment_method.then((t) => {
+
+    console.log(`${t}:my husband is comming pay all bill i promies you  `);
+
+  });
+
+
+
+  console.log(`fourth person done the payment`);
+
+
+
+  console.log(`fifth person done the payment`);
+
+
+
+  // *****************************
+
+
+
+    function test() {
+
+    document.body.innerHTML = "my name is Aramn Pathan"
+
+    }
+
+
+
+    console.log(1);
+
+    console.log(2);
+
+    console.log(3);
+
+
+
+    console.log(4);
+
+
+
+  setTimeout(test, 3000) // await non blocking js here
+
+
+
+  let h1 = document.getElementById("container")
+
+
+
+  let a = 0
+
+
+
+  let id = setInterval(function(){
+
+
+
+    h1.innerText = a
+
+    a++;
+
+  })
+
+
+
+  function stop(){
+
+
+
+    clearInterval(id)
+
+  }
+
+
+
+  
+
+  setTimeout(()=>{
+
+
+
+    console.log("my name is Arman")
+
+  }, 5000)
+
+  console.log(2)
+
+
+
+
+
+
+  console.log(1)
+
+  console.log(2)
+
+
+
+  function test()
+
+  {
+
+    setTimeout(function(){
+
+  console.log(3)
+
+    },2000)
+
+  }
+
+
+
+  console.log(4)
+
+  console.log(5)
+
+
+
+  test()
+
+
+
+  console.log(1)
+
+  function test(){
+
+
+
+   document.body.append("my code is execute then end of time")
+
+  }
+
+  console.log(3)
+
+  console.log(4)
+
+
+
+  
+
+    console.log(`Person1 :show ticket`);
+
+    console.log(`Person2 :show ticket`);
+
+
+
+    const promiseWifebrining = new Promise((resolve, reject) => {
+
+      setTimeout(() => {
+
+        resolve("ticket");
+
+      }, 2000);
+
+    });
+
+
+
+    promiseWifebrining.then((t) => {
+
+      console.log(`Person3 : show ${t}`);
+
+    });
+
+
+
+  let getpopcorn =   promiseWifebrining.then((t) => {
+
+      console.log(`wife : i have the tics`)
+
+    console.log(`husband : we should go in`);
+
+
+
+      console.log("wife : no i am hungry")
+
+
+
+      return new Promise((resolve , reject)=> resolve(`${t} popcorn`))
+
+    });
+
+
+
+   const getbutter =  getpopcorn.then((t)=>{
+
+  console.log(`husband : i got some popcorn`)
+
+    console.log(`husband : we should go in`);
+
+    console.log(`wife : I need butter on my popcorn`);
+
+
+
+    return new Promise((resolve, reject)=>{
+
+
+
+      resolve(`${t} butter`)
+
+    })
+
+   })
+
+
+
+   getbutter.then((t)=>console.log(t))
+
+    console.log(`Person4 :show ticket`);
+
+    console.log(`Person5 :show ticket`);
+
+
+
+  // *************************************
+
+
+
+  // promise here use the most
+
+
+
+  console.log(`Person1 :show ticket`);
+
+  console.log(`Person2 :show ticket`);
+
+
+
+  const premvoie = async () => {
+
+
+
+    const promisewife = new Promise((resolve , reject)=>{
+
+
+
+      setTimeout(()=>resolve(`my name is Arman`),3000)
+
+    });
+
+    let ticket = await promisewife;
+
+
+
+    return ticket
+
+  };
+
+
+
+  premvoie().then((m) => console.log(m));
+
+  console.log(`Person3 :show ticket`);
+
+  console.log(`Person4 :show ticket`);
+
+
+
+  // *****************************
+
+
+
+  // Promise are asynchronous
+
+
+
+  async function dadpro() {
+
+    
+
+    const datapromise = await new Promise((resolve, reject) => {
+
+       setTimeout(() => {
+
+        var salarycreadit = true;
+
+        var salary = 100000;
+
+
+
+        var costp5 = 10000;
+
+
+
+        var costp4 = 30000;
+
+        if (salarycreadit == true && salary > costp5) {
+
+          resolve("buy him ps3");
+
+        } else if (salarycreadit == true && salary > costp4) {
+
+          reject("by him ps4");
+
+        } else {
+
+          reject("sorry sone try to next month");
+
+        }
+
+      }, 1000);
+
+    });
+
+    console.log(datapromise);
+
+  }
+
+
+
+  dadpro();
+
+</script>
